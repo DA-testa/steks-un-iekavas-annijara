@@ -24,7 +24,7 @@ def find_mismatch(text):
             opening_brackets_stack.pop()
         if opening_brackets_stack:
             return opening_brackets_stack[0].position
-        return "Success"
+        
                # pass
            # opening_brackets_stack.pop()
          # !opening_brackets_stack.top().Matchc(next))
@@ -33,10 +33,10 @@ def find_mismatch(text):
 def main():
     text = input()
     mismatch = find_mismatch(text)
-    """ if not mismatch :
+    if not mismatch :
         print("Success")
-    else: """
-    print(mismatch)
+    else:
+        print(mismatch)
     # Printing answer, write your code here
 
 
