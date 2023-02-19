@@ -1,7 +1,7 @@
+
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
-
 
 def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
