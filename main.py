@@ -11,6 +11,18 @@ def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
         if next in "([{":
+            opening_brackets_stack.append(Bracket(next, i + 1)) 
+        if next in ")]}":
+            if not opening_brackets_stack or are_matching(opening_brackets_stack[-1].char, next):
+                return 1+i
+            opening_brackets_stack.pop()
+            if opening_brackets_stack:
+                return opening_brackets_stack[0].position
+        return"Success"
+        
+"""    opening_brackets_stack = []
+    for i, next in enumerate(text):
+        if next in "([{":
             opening_brackets_stack.append(Bracket(next, i+1)) 
         if next in ")]}":
             if not opening_brackets_stack or are_matching(opening_brackets_stack[-1].char, next):
@@ -18,16 +30,16 @@ def find_mismatch(text):
             opening_brackets_stack.pop()
         if opening_brackets_stack:
             return opening_brackets_stack[0].position
-    return"Success"
+    return"Success" """
 
 
 def main():
     #I un F izvade
-    #s = input()
+    s = input()
     text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
 
 if __name__ == "__main__":
-    #input("I")
+    input("I")
     main()
