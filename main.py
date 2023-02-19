@@ -26,7 +26,7 @@ def find_mismatch(text):
 def main():
     #print("Ievadiet I vai F:")
     s = input()
-    if s == "I" :
+    if s == "I" or s == "F":
         text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
