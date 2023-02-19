@@ -19,7 +19,7 @@ def find_mismatch(text):
             if opening_brackets_stack:
                 return opening_brackets_stack[0].position
         return"Success"
-        
+
 """    opening_brackets_stack = []
     for i, next in enumerate(text):
         if next in "([{":
@@ -35,11 +35,11 @@ def find_mismatch(text):
 
 def main():
     #I un F izvade
-    s = input()
+    #s = input()
     text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
 
 if __name__ == "__main__":
-    input("I")
+    #input("I")
     main()
