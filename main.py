@@ -35,11 +35,12 @@ def find_mismatch(text):
 
 def main():
     #I un F izvade
-    #s = input()
-    text = input()
+    s = input()
+    if s=="I" or "F":
+        text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
 
 if __name__ == "__main__":
-    #input("I")
+    input("I")
     main()
