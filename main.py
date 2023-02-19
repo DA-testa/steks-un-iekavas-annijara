@@ -36,7 +36,7 @@ def find_mismatch(text):
 def main():
     #I un F izvade
     s = input()
-    if s=="I" or "F":
+    if s=="I" or s=="F":
         text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
