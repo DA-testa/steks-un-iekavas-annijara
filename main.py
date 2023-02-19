@@ -1,9 +1,7 @@
 # python3
-
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
-
 
 def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
@@ -24,13 +22,11 @@ def find_mismatch(text):
 
 
 def main():
-    #print("Ievadiet I vai F:")
     s = input()
     if s == "I" or s == "F":
         text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
-
 
 if __name__ == "__main__":
     main()
