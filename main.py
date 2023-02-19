@@ -37,10 +37,11 @@ def main():
     #I un F izvade
     #s = input()
     #if s=="I" or "F":
+    input("I")
     text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
 
 if __name__ == "__main__":
-    input("I")
+    #input("I")
     main()
