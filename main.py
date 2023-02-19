@@ -15,12 +15,12 @@ def find_mismatch(text):
         if next in "([{":
             opening_brackets_stack.append(Bracket(next, i + 1)) 
         if next in ")]}":
-            if not opening_brackets_stack or are_matching(opening_brackets_stack[-1].char, next):
-                return 1+i
-            opening_brackets_stack.pop()
-            if opening_brackets_stack:
-                return opening_brackets_stack[0].position
-        return"Success"
+                if not opening_brackets_stack or are_matching(opening_brackets_stack[-1].char, next):
+                    return 1+i
+                opening_brackets_stack.pop()
+                if opening_brackets_stack:
+                    return opening_brackets_stack[0].position
+                return"Success"
 
 
 def main():
